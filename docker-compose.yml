@@ -21,7 +21,7 @@ services:
       - websocket
       - api
   adb:
-    image: sorccu/adb:latest
+    image: zbcjackson/raspberrypi-adb
     restart: unless-stopped
     privileged: true
     volumes:
@@ -66,7 +66,7 @@ services:
     restart: unless-stopped
     command: stf triproxy app --bind-pub "tcp://*:7150" --bind-dealer "tcp://*:7160" --bind-pull "tcp://*:7170"
   dev-triproxy:
-    image: openstf/stf:latest
+    image: openstf/stf-armv7l:latest
     restart: unless-stopped
     command: stf triproxy dev --bind-pub "tcp://*:7250" --bind-dealer "tcp://*:7260" --bind-pull "tcp://*:7270"
   migrate:
