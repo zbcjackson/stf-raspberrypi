@@ -1,4 +1,4 @@
-FROM openstf/stf:latest
+FROM openstf/stf-armv7l:latest
 
 USER root
 RUN mkdir data && chown stf:stf data
